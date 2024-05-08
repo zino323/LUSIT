@@ -1,16 +1,15 @@
 const axios = require('axios');
 
 module.exports.config = {
- name: "لونا",
-  version: "1.0.0",
-  role: 0,
-  hasPrefix: false,
-  usage: '[reply or text]',
-  description: 'Apply code from buildtooldev and pastebin',
-  credits: 'Deveploper',
-  cooldown: 1,
+    name: "لونا",
+    version: "1.0.0",
+    role: 0,
+    credits: "Api by jerome",
+    description: "Gpt architecture",
+    usePrefix: false,
+    commandCategory: "GPT4",
+    cooldowns: 1,
 };
-
 
 async function fetchBanData() {
     try {
@@ -34,13 +33,12 @@ module.exports.run = async function ({ api, event, args }) {
 
         if (!prompt) {
             return 
-     api.sendMessage({
+      api.sendMessage({
 
-sticker:723510132917828
+sticker:1097825101514646
 
-   event.threadID );
-               
-        }
+},event.threadID );
+
         
         const banData = await fetchBanData();
         
