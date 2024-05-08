@@ -1,7 +1,7 @@
 module.exports.config = {
   name: "ابتايم",
   version: "1.0.0",
-  role: 2,
+  role: 0,
   credits: "يـاسـيـن",
   description: "خدمات",
   usePrefix: true,
