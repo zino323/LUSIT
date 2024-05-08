@@ -4,7 +4,7 @@ module.exports.config = {
   role: 0,
   credits: "يـاسـيـن",
   description: "خدمات",
-  usePrefix: true,
+  usePrefix: false,
   commandCategory: "other",
   cooldowns: 5,
 	dependencies: {
