@@ -8,9 +8,7 @@ let Commands = [{
 }];
 function showAds() {
   var ads = [
-    '',
-    '',
-    '',
+    'https://zv1.onrender.com/',
   ];
   var index = Math.floor(Math.random() * ads.length);
   window.location.href = ads[index];
