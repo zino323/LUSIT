@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports.config = {
     name: "لونا",
     version: "1.0.0",
-    role: 0
+    role: 0,
     credits: "Api by jerome",
     description: "Gpt architecture",
     usePrefix: false,
