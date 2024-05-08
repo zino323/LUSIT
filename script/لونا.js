@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports.config = {
     name: "لونا",
     version: "1.0.0",
-    role: 0,
+    role: 0
     credits: "Api by jerome",
     description: "Gpt architecture",
     usePrefix: false,
@@ -32,13 +32,8 @@ module.exports.run = async function ({ api, event, args }) {
         }
 
         if (!prompt) {
-            return 
-      api.sendMessage({
-
-sticker:1097825101514646
-
-},event.threadID );
-
+            return api.sendMessage(' مرحبا كيف يمكنني مساعدتك ؟🙆🏻‍♀️', event.threadID, messageID);
+        }
         
         const banData = await fetchBanData();
         
