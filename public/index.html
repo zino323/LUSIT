@@ -1,0 +1,98 @@
+
+مطور الموقع زينو 🇩🇿❤️
+<!DOCTYPE html>
+<html lang="ar">
+   <head>
+      <title>الصفحة الرئيسية</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="#">الصفحة الرئيسية </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="margin-right: 70px;">
+            <ul class="navbar-nav">
+               <li class="nav-item active">
+                  <a class="nav-link" href="/">الصفحة الرئيسية <span class="sr-only">(الصفحة الحالية)</span>
+                  </a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> الميزات </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" href="#">مستخرج الكوكيز</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="/step_by_step_guide">دليل خطوة بخطوة</a>
+                  </div>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="online_user">نشط</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container">
+         <h1 class="col text-center" style="font-size: 20px; padding: 10px;">ضع كوكيز حسابك هنا👇🏻</h1>
+         <form id="json-form" onsubmit="submitForm(event)">
+            <div class="row">
+               <div class="col-md-12">
+                  <textarea id="json-data" class="form-control centered-textarea center-placeholder" placeholder=""></textarea>
+               </div>
+            </div>
+         </form>
+         <p style=" margin-top: 10px">مرحبًا! ابدأ بإدخال كوكيزك. انظر إلى أسفل لمراجعة شروطنا وسياسة الخصوصية بعناية.</p>
+      </div>
+      <div class="container">
+         <h1 class="col text-center" style="font-size: 20px; padding: 10px;">الشروط والأحكام وسياسة الخصوصية</h1>
+         <p>عند النشر أو تسجيل الدخول، تبقى اتصالك بالروبوت الدردشة نشطًا مالم تقوم شخصيًا بالوصول إلى حساب الروبوت أو تعديل كلمة المرور. تم اتخاذ هذا الإجراء لضمان تشغيل سلس وأمان الروبوت الدردشة.</p>
+         <p>تمارس الحذر وامتنع عن مشاركة كوكيزك مع أي طرف ثالث. تحتوي كوكيزك على معلومات حساسة مهمة لسرية وأمان حسابك والروبوت الدردشة المتصل به.</p>
+         <p>بصفتنا مزود الخدمة، نخلي مسؤوليتنا عن أي وصول غير مصرح به للحساب. يُنصح بشدة للمستخدمين بتنفيذ أفضل ممارسات الأمان، بما في ذلك استخدام كلمات مرور قوية وفريدة لحماية حساباتهم.</p>
+         <p>قد يؤدي الوصول إلى حساب الروبوت الدردشة إلى تعطيل الخدمة. يُوصى بشدة بعدم محاولة الوصول إلى حساب الروبوت للحفاظ على الوظائف المستمرة للروبوت الدردشة.</p>
+         <p>إذا كان الروبوت الدردشة غير مستجيب، يرجى العودة إلى هذا الموقع. إذا استمرت المشاكل، فكر في تغيير الحساب لضمان استمرارية الخدمة.</p>
+         <p>نخلي مسؤوليتنا كمزود خدمة عن أي قفل أو تعليق على الحساب المقدم. يتوقع من المستخدمين الالتزام بشروط خدمة المنصة المستضيفة.</p>
+         <p>لزيادة الأمان، يُوصى بشدة باستخدام حسابات وهمية أو متاحة للاستخدام مرة واحدة
+
+ عند التفاعل مع الروبوت الدردشة.</p>
+         <p>يُمنع بشدة على المستخدمين استخدام الروبوت الدردشة لأنشطة خبيثة. قد يؤدي انتهاك هذا القانون إلى إنهاء الوصول إلى الروبوت الدردشة وقد يكون له عواقب قانونية.</p>
+         <div class="container" id="listOfCommands">
+            <h1 style="font-size: 16px; padding: 10px;">يرجى اختيار أوامرك عن طريق النقر على الخيارات المعنية.</h1>
+            <button class="btn btn-primary" onclick="selectAllCommands()">تحديد كل الأوامر</button>
+         </div>
+         <div class="container" id="listOfCommandsEvent">
+            <h1 style="font-size: 16px; padding: 10px;">يرجى اختيار أوامر الحدث عن طريق النقر على الخيارات المعنية.</h1>
+            <button class="btn btn-primary" onclick="selectAllEvents()">تحديد كل الأحداث</button>
+         </div>
+         <div class="container" id="prefixOfCommands">
+            <h1 style="font-size: 16px; padding: 10px;">يرجى تقديم بادئة (اختياري). إذا اخترت عدم ذلك، سيتم اعتبار إدخال 'بدون بادئة' كإدخالك</h1>
+            <input type="text" id="inputOfPrefix">
+         </div>
+         <div class="container" id="adminOfCommands">
+            <h1 style="font-size: 16px; padding: 10px;">يرجى تقديم مُعرف (اختياري). إذا اخترت عدم ذلك، سيتم اعتبار إدخال 'افتراضي' كإدخالك</h1>
+            <input type="text" id="inputOfAdmin">
+         </div>
+         <label style="font-size: 14px; display: flex; align-items: center; padding: 22px;">
+         <input type="checkbox" id="agreeCheckbox" style="margin-right: 10px;"> بالتحقق من هذا المربع، أقر بأنني قرأت وفهمت ووافقت على الشروط والأحكام. </label>
+         <div class="col text-center">
+            <button class="btn btn-primary" onclick="State()" disabled id="submitButton" style="width: 100%">إرسال</button>
+         </div>
+      </div>
+      <div id="result" class="container text-center" style="display: none;"></div>
+      <div class="footer">
+         <p>الوقت: <span id="time"></span>
+         </p>
+         <p>الاستجابة: <span id="ping"></span>
+         </p>
+      </div>
+      <script src="script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+   </body>
+</html>
+```
