@@ -1,0 +1,5 @@
+.navbar-brand {
+    background: -webkit-linear-gradient(#ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
