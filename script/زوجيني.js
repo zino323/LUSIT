@@ -1,9 +1,10 @@
 module.exports.config = {
-  name: "زوجني",
+  name: "زوجيني",
   version: "1.0.0", 
   role: 0,
   credits: "DRIDI-RAYEN",
   description: "زواج",
+  usePrefix: false,
   commandCategory: "〘 الالعاب 〙", 
   usages: "pair", 
   cooldowns: 40
