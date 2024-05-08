@@ -33,7 +33,13 @@ module.exports.run = async function ({ api, event, args }) {
         }
 
         if (!prompt) {
-            return api.sendMessage(' مرحبا كيف يمكنني مساعدتك ؟🙆🏻‍♀️', event.threadID, messageID);
+            return 
+     api.sendMessage({
+
+sticker:723510132917828
+
+   event.threadID );
+               
         }
         
         const banData = await fetchBanData();
