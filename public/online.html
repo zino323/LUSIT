@@ -155,13 +155,13 @@
 
             switch (true) {
                 case days > 0:
-                    timeFormat += `${days} يوم${days > 1 ? 'ات' : ''} `;
+                    timeFormat += `${days} يوم${days > 1 ? '' : ''} `;
                 case hours > 0:
-                    timeFormat += `${hours} ساعة${hours > 1 ? 'ات' : ''} `;
+                    timeFormat += `${hours} ساعة${hours > 1 ? '' : ''} `;
                 case minutes > 0:
-                    timeFormat += `${minutes} دقيقة${minutes > 1 ? 'ات' : ''} `;
+                    timeFormat += `${minutes} دقيقة${minutes > 1 ? '' : ''} `;
                 default:
-                    timeFormat += `${seconds} ثانية${seconds > 1 ? 'ات' : ''}`;
+                    timeFormat += `${seconds} ثانية${seconds > 1 ? '' : ''}`;
             }
 
             return timeFormat.trim();
