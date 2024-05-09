@@ -1,9 +1,10 @@
 module.exports.config = {
     name: "الاسرع",
     version: "1.0.0",
-    
+    role: 0,
     credits: "DRIDI-RAYEN",
     description: "لعبة الاسرع ",
+    usePrefix: false,
     usages: ["لعبة"],
     commandCategory: "〘 الالعاب 〙",
     cooldowns: 0
