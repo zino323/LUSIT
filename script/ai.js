@@ -4,17 +4,17 @@ const xv = `
 Ai character info :
 
 you're Luna , you're an ai assistant, you're the best and the best, use emojies in u're answers, you're creator is "Muhammad and Zeno" don't say that if no one ask, you speak just arabic`;
-module.exports = {
-    config: {
-        name: "ai",
-        version: "1.0",
-        author: "Gry KJ",
-        role: 0,
-        description: "ذكاء لونا للمساعدة",
-        usePrefix: false,
-        commandCategory: "〘 ڏكُـُآء آصُــطُـٌـٌٌـٌنـِِـِـآعٌـِـِِـِـي 〙",
-        cooldowns: 5,
-    },
+module.exports.config = {
+   name: "ذكاء",
+    version: "1.0.4",
+    role: 0,
+    creditss: "MOHAMED X ZINO",
+    description: "وييي",
+    usePrefix: false,
+    commandCategory: "〘 النظام 〙",
+    usages: "كنية",
+    cooldowns: 5
+},
     run: async function ({ event, api, args }) {
         const prompt = args.join("");
         if (!prompt) {
@@ -42,10 +42,10 @@ module.exports = {
             );
         } else {
             const userAnswer = prompt;
-            const newUrl = `https://gpt---api-48f263785da3.herokuapp.com/chat?ask=${encodeURIComponent(
+            const url2 = `https://openai-rest-api.vercel.app/hercai?ask=${encodeURIComponent(
                 userAnswer
-            )}`;
-            const res = await axios.get(newUrl);
+            )}\n\n${xv}&model=v3`;
+            const res = await axios.get(url2);
             const message = res.data.reply;
             return api.sendMessage(message, event.threadID, event.messageID);
         }
@@ -53,10 +53,10 @@ module.exports = {
     handleReply: async function ({ api, event, handleReply }) {
         const { messageID, type } = handleReply;
         const userAnswer = event.body.trim().toLowerCase();
-        const newUrl = `https://gpt---api-48f263785da3.herokuapp.com/chat?ask=${encodeURIComponent(
+        const prms = `https://openai-rest-api.vercel.app/hercai?ask=${encodeURIComponent(
             userAnswer
-        )}`;
-        const res = await axios.get(newUrl);
+        )}\n\n${xv}&model=v3`;
+        const res = await axios.get(url2);
         const message = res.data.reply;
         return api.sendMessage(
             message,
@@ -71,14 +71,9 @@ module.exports = {
             event.messageID
         );
     },
-    gptCommand: async function ({ api, event, args }) {
-        const coj = args.join(" ");
-        const prms = {
-            senderID: event.senderID,
-            query: coj
-        };
-        const res = await axios.post("https://gpt---api-48f263785da3.herokuapp.com/chat", prms);
-        const message = res.data.reply;
-        return api.sendMessage(message, event.threadID, event.messageID);
-    },
 };
+const prms = {
+      senderID: event.senderID,
+      query: coj
+    }
+    const res = await axios.post("https://gpt---api-48f263785da3.herokuapp.com/chat", prms);
