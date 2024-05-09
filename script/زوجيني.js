@@ -1,10 +1,9 @@
 module.exports.config = {
-  name: "زوجيني",
+  name: "زوجني",
   version: "1.0.0", 
   role: 0,
   credits: "DRIDI-RAYEN",
   description: "زواج",
-  usePrefix: false,
   commandCategory: "〘 الالعاب 〙", 
   usages: "pair", 
   cooldowns: 40
@@ -42,4 +41,4 @@ module.exports.run = async function({ api, event,Threads, Users }) {
 
         var msg = {body: `🥰لدينا محبوبان هنا\n💌مبروك الزواح\n💕نسبة الرمسنية بينكم هي: ${tle}%\n`+namee+" "+"💓"+" "+name, mentions: arraytag, attachment: imglove}
         return api.sendMessage(msg, event.threadID, event.messageID)
-          }
+              }
