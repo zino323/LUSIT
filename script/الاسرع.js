@@ -1,5 +1,3 @@
-
-
 module.exports.config = {
     name: "الاسرع",
     version: "1.0.0",
@@ -22,7 +20,7 @@ module.exports.handleReply = async function ({ api, event, handleReply, Currenci
 
     if (userAnswer === correctAnswer) {
         Currencies.increaseMoney(event.senderID, 50);
-        api.sendMessage(`✅|  قــام ${userName} بالإجــــابة أولا وحصـــــل على 50 نجمة🌟`, event.threadID);
+        api.sendMessage(`✅|  صحيح ${userName} `, event.threadID);
 
         api.unsendMessage(handleReply.messageID);
     } else {
