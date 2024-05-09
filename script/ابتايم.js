@@ -1,6 +1,6 @@
 module.exports.config = {
 
-    name: "وقت",
+    name: "ابتايم",
 
     version: "1.0.1", 
 
