@@ -9,11 +9,11 @@ module.exports = {
         name: "ai",
         version: "1.0",
         author: "Gry KJ",
-        cooldowns: 5,
         role: 0,
         description: "ذكاء لونا للمساعدة",
         usePrefix: false,
         commandCategory: "〘 ڏكُـُآء آصُــطُـٌـٌٌـٌنـِِـِـآعٌـِـِِـِـي 〙",
+        cooldowns: 5,
     },
     run: async function ({ event, api, args }) {
         const prompt = args.join("");
