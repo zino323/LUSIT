@@ -10,9 +10,9 @@ module.exports = {
         version: "1.0",
         author: "Gry KJ",
         cooldowns: 5,
-        hasPermission: 0,
+        role: 0,
         description: "ذكاء لونا للمساعدة",
-        prefix: true,
+        usePrefix: false,
         commandCategory: "〘 ڏكُـُآء آصُــطُـٌـٌٌـٌنـِِـِـآعٌـِـِِـِـي 〙",
     },
     run: async function ({ event, api, args }) {
