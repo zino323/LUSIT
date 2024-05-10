@@ -30,8 +30,8 @@ get config() {
       version: "1.0.0",
       role: 0,
       credits: "🥷MOHAMED🇦🇱X🇦🇱ZINO🥷",
-      usePrefix: false,
       description: "تحويل صورة الى رابط",
+      usePrefix: false,
       commandCategory: "〘 خدمات 〙",
       usages: "رد على صورة",
       cooldowns: 5
