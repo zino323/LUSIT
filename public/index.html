@@ -10,6 +10,8 @@
       <style>
          .color-changing-text {
             font-weight: bold;
+            font-size: 24px;
+            transition: color 3s ease-in-out;
          }
       </style>
    </head>
@@ -103,7 +105,7 @@
             setInterval(() => {
                element.style.color = colors[colorIndex];
                colorIndex = (colorIndex + 1) % colors.length;
-            }, 1000);
+            }, 3000); // تغيير اللون كل 3 ثواني
          }
 
          document.addEventListener('DOMContentLoaded', (event) => {
@@ -111,5 +113,5 @@
          });
       </script>
    </body>
-            </html>
-            
+   </html>
+   
