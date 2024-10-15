@@ -13,7 +13,7 @@ var axios = require("axios");
 var api_key = "";
 async function chat(messages) {
  // console.log(messages)
-  var apikey = require("../../DB/apikey.json");
+  var apikey = require("../../DD/apikey.json");
   var token = apikey[Math.floor(Math.random()*apikey.length)];
   var key = token.token[Math.floor(Math.random()*token.token.length)];
  // console.log(key)
